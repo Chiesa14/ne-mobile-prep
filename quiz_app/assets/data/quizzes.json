@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "title": "General Knowledge",
+    "description": "Test your general knowledge skills",
+    "image": "https://placehold.co/150/7E6DF3/FFFFFF?text=GK"
+  },
+  {
+    "id": "2",
+    "title": "Science",
+    "description": "Explore the world of science",
+    "image": "https://placehold.co/150/AB3CFC/FFFFFF?text=Science"
+  },
+  {
+    "id": "3",
+    "title": "History",
+    "description": "How much do you know about history?",
+    "image": "https://placehold.co/150/F9F9FF/1E1E1E?text=History"
+  }
+]

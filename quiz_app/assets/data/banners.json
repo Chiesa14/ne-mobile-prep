@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "image": "https://dummyimage.com/350x200/7E6DF3/FFFFFF?text=Welcome+to+QuizApp"
+  },
+  {
+    "id": "2",
+    "image": "https://dummyimage.com/350x200/AB3CFC/FFFFFF?text=Challenge+Yourself"
+  },
+  {
+    "id": "3",
+    "image": "https://dummyimage.com/350x200/F9F9FF/1E1E1E?text=Track+Progress"
+  }
+]
