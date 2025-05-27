@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TextInput, View, Text, Pressable } from 'react-native';
 import { Feather, Ionicons } from '@expo/vector-icons';
 
@@ -25,14 +25,14 @@ const InputField: React.FC<InputFieldProps> = ({
 
   return (
     <View className="mb-4">
-      <Text className="mb-2 text-[#1E1E1E]">{label}</Text>
+      <Text className="mb-2 text-text">{label}</Text>
       <View
         className={`flex-row items-center rounded-xl border px-4 py-3 ${
           error ? 'border-red-500' : 'border-gray-300'
-        } bg-white`}>
-        <Feather name={iconName} size={20} color="#7E6DF3" />
+        } bg-background`}>
+        <Feather name={iconName} size={20} color="#6366F1" />
         <TextInput
-          className="ml-2 flex-1 text-[#1E1E1E]"
+          className="ml-2 flex-1 text-text"
           placeholder={placeholder}
           value={value}
           onChangeText={onChangeText}
@@ -41,7 +41,7 @@ const InputField: React.FC<InputFieldProps> = ({
         />
         {isPassword && (
           <Pressable onPress={() => setSecureText(!secureText)}>
-            <Ionicons name={secureText ? 'eye-off' : 'eye'} size={20} color="#AB3CFC" />
+            <Ionicons name={secureText ? 'eye-off' : 'eye'} size={20} color="#6366F1" />
           </Pressable>
         )}
       </View>

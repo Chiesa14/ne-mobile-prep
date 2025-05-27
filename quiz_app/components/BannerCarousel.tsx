@@ -31,7 +31,7 @@ const BannerCarousel = ({ data }: { data: Banner[] }) => {
         scrollAnimationDuration={1000}
         onSnapToItem={(index) => setActiveIndex(index)}
         renderItem={({ item }) => (
-          <View className=" mx-3 overflow-hidden rounded-3xl bg-gray-100 shadow-lg">
+          <View className="mx-3 overflow-hidden rounded-3xl bg-background shadow-lg">
             <Image
               source={{ uri: item.image }}
               className="h-full w-full rounded-3xl"
@@ -56,7 +56,7 @@ const BannerCarousel = ({ data }: { data: Banner[] }) => {
           <View
             key={index}
             className={`mx-1 h-2 w-2 rounded-full ${
-              index === activeIndex ? 'bg-purple-500' : 'bg-gray-400'
+              index === activeIndex ? 'bg-primary' : 'bg-gray-400'
             }`}
           />
         ))}

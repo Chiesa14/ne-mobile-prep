@@ -19,13 +19,14 @@ const Button: React.FC<ButtonProps> = ({
   iconName,
   iconColor = '#fff',
   iconSize = 20,
-  className = 'bg-[#7E6DF3] py-3 rounded-xl mt-4',
-  textClassName = 'text-white font-semibold text-center',
+  className = '',
+  textClassName = 'font-semibold text-center text-white',
 }) => {
   return (
     <TouchableOpacity
       onPress={onPress}
-      className={clsx('flex-row items-center justify-center', className)}>
+      className={`${className} flex-row items-center justify-center py-3 rounded-lg`}
+      >
       {iconName && (
         <FontAwesome name={iconName} size={iconSize} color={iconColor} className="mr-2" />
       )}

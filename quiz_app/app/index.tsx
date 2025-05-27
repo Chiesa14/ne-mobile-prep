@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { View, ActivityIndicator, Text } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Onboarding from 'react-native-onboarding-swiper';
@@ -6,16 +6,8 @@ import { useRouter } from 'expo-router';
 import '../global.css';
 
 const PlaceholderImage = ({ text }: { text: string }) => (
-  <View
-    style={{
-      width: 220,
-      height: 220,
-      backgroundColor: '#AB3CFC',
-      justifyContent: 'center',
-      alignItems: 'center',
-      borderRadius: 20,
-    }}>
-    <Text style={{ color: '#fff', fontSize: 16 }}>{text}</Text>
+  <View className="w-[220px] h-[220px] bg-primary justify-center items-center rounded-[20px]">
+    <Text className="text-white text-base">{text}</Text>
   </View>
 );
 
@@ -30,7 +22,7 @@ const Index = () => {
         setIsFirstLaunch(hasLaunched === null);
       } catch (error) {
         console.error('Error checking first launch:', error);
-        setIsFirstLaunch(false); // Default to not first launch if there's an error
+        setIsFirstLaunch(false);
       }
     };
     checkFirstLaunch();
@@ -53,8 +45,8 @@ const Index = () => {
 
   if (isFirstLaunch === null) {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <ActivityIndicator size="large" color="#7E6DF3" />
+      <View className="flex-1 justify-center items-center">
+        <ActivityIndicator size="large" color="#6366F1" />
       </View>
     );
   }
@@ -65,7 +57,7 @@ const Index = () => {
         onDone={handleDone}
         pages={[
           {
-            backgroundColor: '#F9F9FF',
+            backgroundColor: '#F9FAFB',
             image: <PlaceholderImage text="👋 Welcome" />,
             title: 'Welcome to QuizApp',
             subtitle: 'Test your knowledge with fun quizzes!',
@@ -73,7 +65,7 @@ const Index = () => {
             subTitleStyles: { color: '#1E1E1E' },
           },
           {
-            backgroundColor: '#F9F9FF',
+            backgroundColor: '#F9FAFB',
             image: <PlaceholderImage text="📈 Track" />,
             title: 'Track Your Progress',
             subtitle: 'Monitor your improvements over time.',
@@ -81,7 +73,7 @@ const Index = () => {
             subTitleStyles: { color: '#1E1E1E' },
           },
           {
-            backgroundColor: '#F9F9FF',
+            backgroundColor: '#F9FAFB',
             image: <PlaceholderImage text="🤝 Challenge" />,
             title: 'Challenge Friends',
             subtitle: 'Compete with friends and climb the leaderboard.',
